@@ -1,0 +1,24 @@
+<p>listado Semana!</p>
+
+
+<div *ngIf = "mostrarsemana.length>0;else noborrado">
+  <h3>Semana borrado</h3>
+  <span *ngFor = "let recu of mostrarsemana">
+    {{recu}}
+  </span>
+</div>
+<ng-template #noborrado>
+  <h3>no ha borrado</h3>
+</ng-template>
+
+
+<button (click) = "borrarSemana()">borrar semana</button>
+
+<ul>
+  <li *ngFor = "let seman of semana; let i = index">
+    {{i+1}} - {{seman}}
+  </li>
+</ul>
+
+
+
